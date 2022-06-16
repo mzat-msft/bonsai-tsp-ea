@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  predictor:
+    build: .
+    environment:
+      TSP_SERVER: 1
+      BRAIN_HOST: brain
+    ports:
+      - "8000:8080"
+  brain:
+    image: BRAIN_IMAGE

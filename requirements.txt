@@ -1,0 +1,3 @@
+aiohttp
+microsoft-bonsai-api
+requests
