@@ -122,3 +122,21 @@ $ curl --header "Content-Type: application/json" \
 
 {"best_route": ["barcelona", "milan", "london", "paris"], "best_score": 87.10856842391789}
 ```
+
+
+## Evaluation
+
+In folder ``data`` are provided some known TSP configuration for the purpose
+of evaluating the brain. We provide also a python script in
+``scripts/evaluate.py`` that perform an evaluation of the EA + Bonsai brain
+solution against all datasets in ``data``.
+
+Here the result of an evaluation we performed. For each dataset we report the
+length of the shortest path found by our solution and the total time needed
+to find the best solution in seconds.
+
+| Dataset   | length | seconds  |
+| --------- | ------ | -------- |
+| ulysses22 | 76.92  | 15.23857 |
+| ulysses16 | 74.00  | 9.348792 |
+| burma14   | 30.88  |  7.74905 |
