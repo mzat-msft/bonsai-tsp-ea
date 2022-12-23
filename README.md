@@ -18,6 +18,20 @@ state space and many constraints. However, we could as well replace EA with
 any other AI algorithm to suit different problems.
 
 
+### Why don't you use a brain directly?
+
+A brain is probably not the best tool for solving this problem. Some of the
+reasons are as follows. A brain would work best in sequential mode, where at
+each iteration of an episode the brain would select the best city to visit
+next. This has two implications. The first is that the brain action space
+would depend on the number of cities, that is if we have N cities in the TSP
+the brain has N possible actions, and if we have M cities the actions are M.
+This implies that we need to train a different brain for each possible number
+of cities. The second implications is that the actions that the brain are
+always different in each episode, since every city has to be visited only
+once per route.
+
+
 ## The TSP as a simulation
 
 In a typical Bonsai project we have a simulation that represents the
